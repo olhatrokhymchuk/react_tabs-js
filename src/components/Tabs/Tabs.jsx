@@ -1,4 +1,6 @@
 export const Tabs = ({ tabs, activeTabId, onTabSelected }) => {
+  if (!tabs || tabs.length === 0) return null;
+
   const activeId = tabs.find(t => t.id === activeTabId)
     ? activeTabId
     : tabs[0] && tabs[0].id;
